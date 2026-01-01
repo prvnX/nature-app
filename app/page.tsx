@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { MapPin, Waves, Trees, Hotel, Plus, Search, Star, Map } from "lucide-react"
+import { SiteHeader } from "@/components/site-header"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
@@ -164,48 +165,8 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4">
-          <Link href="/" className="flex items-center gap-2">
-            <Trees className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold text-foreground">Avidimu Lanka</span>
-          </Link>
-
-          <nav className="hidden md:flex items-center gap-6">
-            <Link
-              href="/#discover"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-            >
-              Discover
-            </Link>
-            <Link
-              href="/nearby"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-            >
-              Nearby
-            </Link>
-            <Link
-              href="/add-place"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-            >
-              Add Place
-            </Link>
-            <Link
-              href="/login"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-            >
-              Sign In
-            </Link>
-          </nav>
-
-          <Link href="/add-place">
-            <Button className="gap-2">
-              <Plus className="h-4 w-4" />
-              Add Place
-            </Button>
-          </Link>
-        </div>
-      </header>
+      {/* Header */}
+      <SiteHeader />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-primary/10 to-background py-20 md:py-28">
